@@ -11,9 +11,9 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Pasien</h4>
-                  <a href="#" class="btn btn-primary round waves-effect waves-light">
-                    Tambah Pasien
+                  <h4 class="card-title">Dokter</h4>
+                  <a href="<?php echo base_url('Admin/Datadokter/tambah_dokter'); ?>" class="btn btn-primary round waves-effect waves-light">
+                    Tambah Dokter
                   </a>
                 </div>
                 <div class="card-content">
@@ -24,15 +24,23 @@
                           <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Tempat Lahir</th>
-                            <th>Tanggal Lahir</th>
-                            <th>No Hp</th>
-                            <th>Alamat</th>
+                            <th>Spesialis</th>
                             <th>Aksi</th>
                           </tr>
                         </thead>
                         <tbody>
-
+                        <?php $no = 1;
+                        foreach ($datadokter as $dokter) : ?>
+                            <tr>
+                                <td><?php echo $no++ ?></td>
+                                <td><?php echo $dokter->nama ?></td>
+                                <td><?php echo $dokter->spesialis ?></td>
+                                <td>
+                                  <a href="#"><i class="m-1 feather icon-edit-2"></i></a>
+                                  <a href="#" class="btn-hapus"><i class="feather icon-trash"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                         </tbody>
                       </table>
                     </div>

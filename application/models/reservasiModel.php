@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class productModel extends CI_Model
+class reservasiModel extends CI_Model
 {
-    public function getProducts() {
+    public function getReservasi() {
         $this->db->select('*');
-        $this->db->from('product');
-        $this->db->order_by('id', 'ASC');
+        $this->db->from('reservasi');
+        $this->db->order_by('id_reservasi', 'ASC');
 
         return $this->db->get();
     }

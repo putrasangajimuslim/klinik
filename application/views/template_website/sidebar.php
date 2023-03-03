@@ -19,8 +19,23 @@
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
           <li class="nav-item">
-            <a href="<?php echo base_url('Admin/Datapasien'); ?>">
+            <a href="<?php echo base_url('Admin/Dashboard'); ?>">
+              <i class="feather icon-home"></i><span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('Admin/Datadokter'); ?>">
               <i class="feather icon-user"></i><span class="menu-title">Dokter</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('Admin/Datapasien'); ?>">
+              <i class="feather icon-user"></i><span class="menu-title">Pasien</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('Admin/Datareservasi'); ?>">
+              <i class="feather icon-calendar"></i><span class="menu-title">Reservasi</span>
             </a>
           </li>
       </ul>
